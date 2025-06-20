@@ -96,7 +96,6 @@
         }
 
         textarea {
-            /* height: 150px !important; */
             width: 100% !important;
             border-radius: 15px;
             color: rgb(255, 255, 255);
@@ -135,7 +134,7 @@
 <body>
     <form action="">
         <label for="textarea">Word Counter <img src="./icons8-counter.gif" alt=""></label>
-        <textarea name="textarea" id="txtar" placeholder="<--Type Here-->"></textarea>
+        <textarea name="textarea" id="txtar" placeholder="<==Type Here==>"></textarea>
 
         <div class="counters">
             <p>
@@ -147,7 +146,7 @@
                 <span id="chars"> 0</span>
             </p>
         </div>
-        <button>Reset Textarea</button>
+        <button type="button" onclick="resetBtn()">Reset Textarea</button>
     </form>
 
     <script src="./script.js"></script>
