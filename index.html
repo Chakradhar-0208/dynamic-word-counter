@@ -15,6 +15,7 @@
         body,
         html {
             height: 100%;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,12 +31,13 @@
             padding: 1rem;
             resize: none;
         }
+
         #txtar:focus {
             border: 2px solid rgba(87, 87, 87, 0.842);
-            
+
             outline: none !important;
         }
-        
+
         #txtar::placeholder {
             line-height: 25vh;
             text-align: center;
@@ -79,25 +81,52 @@
             gap: 3rem;
             align-items: center;
             width: 80vw;
-            height: 55vh;
             padding: 1rem 0rem;
             max-width: 600px;
         }
-        label{
+
+        label {
             color: white;
-            font-size:2rem ;
-            /* border: 2px solid white; */
+            font-size: 2rem;
         }
-        label img{
+
+        label img {
             position: relative;
             top: 2px;
-            height: 1.8rem;
         }
+
         textarea {
-            height: 150px;
+            /* height: 150px !important; */
             width: 100% !important;
             border-radius: 15px;
-            color: white;
+            color: rgb(255, 255, 255);
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 4px 4px 5px;
+            width: 130px;
+            font-size: 0.92rem;
+            border: 1px solid rgb(100, 100, 100);
+            background-color: rgb(59, 59, 59);
+            color: rgb(209, 209, 209);
+            transition: all 0.15s ease;
+        }
+
+        button:hover {
+            border: 1px solid rgb(100, 95, 95);
+            background-color: rgb(209, 209, 209);
+            color: rgb(59, 59, 59);
+        }
+
+
+        @media (hover:none) {
+            button:active {
+                border: 1px solid rgb(100, 95, 95);
+                background-color: rgb(209, 209, 209);
+                color: rgb(59, 59, 59);
+            }
+
         }
     </style>
     <title>Dynamic Word Counter</title>
@@ -118,7 +147,7 @@
                 <span id="chars"> 0</span>
             </p>
         </div>
-
+        <button>Reset Textarea</button>
     </form>
 
     <script src="./script.js"></script>
